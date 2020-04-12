@@ -1,1 +1,7 @@
-{:paths ["src"]}
+{:paths ["src"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        cider/cider-nrepl {:mvn/version "0.24.0"}
+        nrepl {:mvn/version "0.7.0"}}
+ :aliases {:nrepl {:extra-deps {nrepl {:mvn/version "0.7.0"}
+                                cider/cider-nrepl {:mvn/version "0.24.0"}}
+                   :main-opts ["-m" "nrepl.cmdline" "--port" "46365" "-b" "0.0.0.0"]}}}
